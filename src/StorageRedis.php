@@ -5,6 +5,11 @@ use Prometheus\Storage\Redis;
 
 class StorageRedis extends Redis
 {
+    protected static $defaultOptions = array();
+
+    protected $options;
+    protected $redis;
+    
     /**
      * @throws StorageException
      */
