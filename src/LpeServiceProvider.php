@@ -48,7 +48,7 @@ class LpeServiceProvider extends ServiceProvider
                 break;
             case 'redis':
                 $this->app->bind('Prometheus\Storage\Adapter', function($app){
-                    return new \Prometheus\Storage\Redis(config('prometheus_exporter.redis'));
+                    return new StorageRedis(config('prometheus_exporter.redis'));
                 });
                 break;
             default:
