@@ -13,7 +13,7 @@ class StorageRedis extends Redis
     /**
      * @throws StorageException
      */
-    private function openConnection()
+    protected function openConnection()
     {
         try {
             if ($this->options['persistent_connections']) {
